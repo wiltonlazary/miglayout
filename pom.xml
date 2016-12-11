@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.4</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -50,6 +50,16 @@
                 </plugins>
             </build>
         </profile>
+
+		<profile>
+			<id>doclint-java8-disable</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<properties>
+				<javadoc.opts>-Xdoclint:none</javadoc.opts>
+			</properties>
+		</profile>
     </profiles>
 	<build>
 		<plugins>
@@ -86,9 +96,9 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
-                        <configuration>
-                            <additionalparam>-Xdoclint:none</additionalparam>
-                        </configuration>
+						<configuration>
+							<additionalparam>${javadoc.opts}</additionalparam>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -135,7 +145,7 @@
 				</executions>
 			</plugin>
 			 -->
-			 
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
@@ -206,9 +216,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https://code.google.com/p/miglayout</connection>
-		<developerConnection>scm:git:https://code.google.com/p/miglayout</developerConnection>
-		<url>http://code.google.com/p/miglayout/source/browse/</url>
+		<connection>scm:git:https://github.com/mikaelgrev/miglayout.git</connection>
+		<developerConnection>scm:git:https://github.com/mikaelgrev/miglayout.git</developerConnection>
+		<url>https://github.com/mikaelgrev/miglayout</url>
   	</scm>
 
 	<developers>
