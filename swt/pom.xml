@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.miglayout</groupId>
 		<artifactId>miglayout-parent</artifactId>
-		<version>5.1-SNAPSHOT</version>
+		<version>5.3-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>miglayout-swt</artifactId>
@@ -23,7 +23,7 @@
     <repositories>
         <repository>
             <id>maven-eclipse-repo</id>
-            <url>http://maven-eclipse.github.io/maven</url>
+            <url>https://maven-eclipse.github.io/maven</url>
         </repository>
     </repositories>
 
